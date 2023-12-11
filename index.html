@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creador de excusas para comer tarta de queso</title>
+    <script>
+        function generateExcuse() {
+            const phrases = ['investigacion culinaria', 'celebracion de quesos unidos', 'equilibrio lacteo', 'antokjo cientifico', 'rescate lacteo'];
+            const excuses = [
+                ,
+                `"Estoy realizando una profunda investigación sobre las diferentes texturas y sabores de las tartas de queso. Esta es una importante fase experimental.`,
+                `Hoy es el Día Internacional de la Unión de Quesos. ¡Es una tradición honrarlos en forma de tarta!`,
+                `Necesito mantener un equilibrio adecuado entre los productos lácteos y, por supuesto, una tarta de queso es esencial para eso.`,
+                `He leído estudios que demuestran que comer tarta de queso aumenta la felicidad y la creatividad. Necesito poner a prueba estas teorías.`,
+                `La tarta de queso necesita ser rescatada de la nevera antes de que sufra una crisis de identidad. ¡Estoy aquí para ayudar!`,
+                `Hoy estoy honrando mis raíces culturales y en mi cultura, la tarta de queso es un manjar sagrado. ¡Es casi un deber comerla!`,
+                `Hoy, en mi calendario imaginario, es el Día Nacional de la Tarta de Queso. ¡No puedo romper esa tradición!`,
+                `Mi estómago me ha enviado una carta formal solicitando tarta de queso. ¡Es difícil negarle algo a ese órgano tan persistente!`,
+                `Después de un día tan agotador, necesito terapia y, según mi terapeuta, la tarta de queso es la mejor opción.`
+            ];
+
+            let randomPhrase = phrases.random();
+            let randomExcuse = excuses.random();
+
+            return `${randomExcuse} Así que lo mejor, es que me coma un pedazo de tarta de queso.`;
+        }
+
+        Array.prototype.random = function () {
+            let index = Math.floor(Math.random() * this.length);
+            return this[index];
+        };
+    </script>
+</head>
+<body>
+    <h1>Creador de excusas para comer tarta de queso</h1>
+    <p id="excuse"></p>
+    <button onclick="document.getElementById('excuse').innerHTML = generateExcuse()">¿Porque debes comer queso?</button>
+</body>
+</html>
